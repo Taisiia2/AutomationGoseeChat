@@ -28,7 +28,7 @@ public class Methods {
             driver = new ChromeDriver(options);
             driver.manage().window().maximize();
             driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-            driver.get("https://www.ctrs.com.ua/ru/");
+            driver.get("https://www.ctrs.com.ua/");
         } catch (Exception e) {
         }
     }
@@ -37,24 +37,6 @@ public class Methods {
         WebElement element = (new WebDriverWait(driver, java.time.Duration.ofSeconds(10)))
                 .until(ExpectedConditions.presenceOfElementLocated(By.xpath(selector)));
     }
-    public static void GetRegUrlForRegistrationEmail(){
-        String GetURLPage = driver.getCurrentUrl();
-        Assert.assertEquals("https://my.ctrs.com.ua/ru/auth/register", GetURLPage,"test url registration page");
-    }
-    public static void GetRegUrlForAuthorizationEmail() throws InterruptedException {
-        String GetURLPage = driver.getCurrentUrl();
-        Thread.sleep(700);
-        Assert.assertEquals("https://my.ctrs.com.ua/ru/auth/email", GetURLPage,"test url registration page");
-    }
-    public static void GetRegUrlForRegistrationPhoneNember(){
-        String GetURLPage = driver.getCurrentUrl();
-        Assert.assertEquals("https://my.ctrs.com.ua/ru/auth/sms_code", GetURLPage,"test url registration page");
-    }
-    public static void CheckLinkAuthorization(){
-        String GetURLPage = driver.getCurrentUrl();
-        Assert.assertEquals("https://my.ctrs.com.ua/ru/orders", GetURLPage,"test url registration page");
-    }
-
 
     public static void ClickButton(String xp){
         WebElement element = driver.findElement(By.xpath(xp));
@@ -66,15 +48,21 @@ public class Methods {
         Assert.assertEquals(gl,tl,task);
     }
 
-    public static void Scroll() {
-        ((JavascriptExecutor) driver).executeScript("5000");
+    public static void Scroll15000() {
+        ((JavascriptExecutor) driver).executeScript("15000");
 
     }
 
-    public static void WaitLoadPage() throws InterruptedException {
-        Thread.sleep(1000);
+    public static void WaitLoadPage(int time) throws InterruptedException {
+        Thread.sleep(time);
     }
 
+    public static void GoToNewTabBrowser() {
+        for (String tab : driver.getWindowHandles()) {
+            driver.switchTo().window(tab);
+        }
+//        System.out.println(driver.getCurrentUrl());
+    }
 
 
     @AfterClass(alwaysRun = true)

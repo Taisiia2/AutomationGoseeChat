@@ -12,9 +12,10 @@ import static tests.Futter.XpathFutter.ForSMI;
 public class Citrus2ForSMI extends Methods {
 
     @Test(description = "tests citrus")
-    public static void FutterCheck1Carrier() throws InterruptedException {
-        WaitLoadPage();
+    public static void FutterCheck2() throws InterruptedException {
+        WaitLoadPage(2000);
         ClickButton(ForSMI);
+        WaitLoadPage(3000);
         Assert(LinkForSMI, "futter2");
     }
 }

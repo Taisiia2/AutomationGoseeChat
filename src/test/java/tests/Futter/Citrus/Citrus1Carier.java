@@ -9,10 +9,10 @@ import static tests.Futter.XpathFutter.Carrier;
 public class Citrus1Carier extends Methods {
 
     @Test(description = "tests citrus")
-    public static void FutterCheck1Carrier() throws InterruptedException {
-        WaitLoadPage();
+    public static void FutterCheck1() throws InterruptedException {
+        WaitLoadPage(2000);
         ClickButton(Carrier);
-        WaitLoadPage();
+        WaitLoadPage(2000);
         Assert(LinkCarrier, "futter1");
     }
 }
