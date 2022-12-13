@@ -1,17 +1,17 @@
 package tests.Futter.Citrus;
 
 import org.testng.annotations.Test;
-import tests.Futter.Methods;
 
-import static tests.Futter.Links.LinkOPTClient;
-import static tests.Futter.Links.LinkStores;
-import static tests.Futter.XpathFutter.OPTClients;
-import static tests.Futter.XpathFutter.Stores;
+import java.awt.*;
+
+import static tests.Futter.Citrus.Links.LinkStores;
+import static tests.Futter.Citrus.XpathFutter.Stores;
 
 public class Citrus9Stores extends Methods {
     @Test(description = "tests citrus")
-    public static void FutterCheck9() throws InterruptedException {
-        WaitLoadPage(2000);
+    public static void FutterCheck9() throws InterruptedException, AWTException {
+        ScrollToFutter();
+        waitUntil(Stores);
         ClickButton(Stores);
         WaitLoadPage(2000);
         Assert(LinkStores, "futter9");

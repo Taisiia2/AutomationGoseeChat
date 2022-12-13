@@ -1,11 +1,7 @@
 package tests.Futter.Categories;
 
 import org.testng.annotations.Test;
-import tests.Futter.Methods;
-
-import static tests.Futter.Links.LinkAudio;
-import static tests.Futter.Links.LinkCarrier;
-import static tests.Futter.XpathFutter.Audio;
+import tests.Futter.Citrus.Methods;
 
 public class Audio extends Methods {
 

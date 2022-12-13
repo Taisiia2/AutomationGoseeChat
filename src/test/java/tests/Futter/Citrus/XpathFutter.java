@@ -1,4 +1,4 @@
-package tests.Futter;
+package tests.Futter.Citrus;
 
 public class XpathFutter {
     public static final String Carrier = "/html/body/div[1]/div/footer/div/div[1]/div[2]/ul[1]/li[2]/a";

@@ -1,16 +1,17 @@
 package tests.Futter.Citrus;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import tests.Futter.Methods;
 
-import static tests.Futter.Links.LinkNews;
-import static tests.Futter.XpathFutter.News;
+import java.awt.*;
+
+import static tests.Futter.Citrus.Links.LinkNews;
+import static tests.Futter.Citrus.XpathFutter.News;
 
 public class Citrus3News extends Methods {
     @Test(description = "tests citrus")
-    public static void FutterCheck3() throws InterruptedException {
-        WaitLoadPage(2000);
+    public static void FutterCheck3() throws InterruptedException, AWTException {
+        ScrollToFutter();
+        waitUntil(News);
         ClickButton(News);
         WaitLoadPage(2000);
         GoToNewTabBrowser();

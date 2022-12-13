@@ -1,4 +1,4 @@
-package tests.Futter;
+package tests.Futter.Citrus;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -12,6 +12,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
 import java.util.concurrent.TimeUnit;
 
 
@@ -48,9 +50,10 @@ public class Methods {
         Assert.assertEquals(gl,tl,task);
     }
 
-    public static void Scroll15000() {
-        ((JavascriptExecutor) driver).executeScript("15000");
-
+    public static void ScrollToFutter() throws AWTException {
+//        ((JavascriptExecutor) driver).executeScript("100000");
+        Robot robot = new Robot();
+        robot.keyPress(KeyEvent.VK_END);
     }
 
     public static void WaitLoadPage(int time) throws InterruptedException {
