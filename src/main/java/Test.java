@@ -13,5 +13,7 @@ public class Test {
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         driver.get("https://www.ctrs.com.ua/ru/");
+//        driver.get("https://www.ctrs.com.ua/ru/");
+//        driver.get("https://www.ctrs.com.ua/ru/");
     }
 }
