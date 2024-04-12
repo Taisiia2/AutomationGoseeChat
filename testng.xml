@@ -5,16 +5,9 @@
 <suite name="All Test Suite">
     <test name="Test1">
         <classes>
-            <class name="tests.Futter.Citrus.Citrus1Carier"></class>
-            <class name="tests.Futter.Citrus.Citrus2ForSMI"></class>
-            <class name="tests.Futter.Citrus.Citrus3News"></class>
-            <class name="tests.Futter.Citrus.Citrus4BlackFriday"></class>
-            <class name="tests.Futter.Citrus.Citrus5Blog"></class>
-            <class name="tests.Futter.Citrus.Citrus6AboutCompany"></class>
-            <class name="tests.Futter.Citrus.Citrus7OPTClients"></class>
-            <class name="tests.Futter.Citrus.Citrus8Supports"></class>
-            <class name="tests.Futter.Citrus.Citrus9Stores"></class>
-            <class name="tests.Futter.Citrus.Citrus10B2B"></class>
+            <class name="tests.citrus.RegistrationWithEmail"></class>
+            <class name="tests.citrus.RegistrationWithPhone"></class>
+            <class name="tests.citrus.Authorization"></class>
 
 
         </classes>
@@ -35,3 +28,28 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--    <test verbose="2" preserve-order="true" name="C:/other/CucumberFramework/MyTests">-->
+        <!--        <classes>-->
+
+        <!--            <class name="tests_header.Test1"></class>-->
+        <!--            <class name="tests_header.Test2"></class>-->
+
+        <!--        </classes>-->
+
+        <!--        <packages>-->
+        <!--            <package name="tests_header"></package>-->
+        <!--        </packages>-->
+        <!--    </test>-->
