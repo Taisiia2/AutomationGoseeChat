@@ -26,5 +26,6 @@ public class CreateNewUser extends Methods {
         SendKeysWithoutEnter(FieldSearch,name);
         String newUser = getTXT(NewEmployeeName);
         AssertTXT(user, newUser);
+
     }
 }

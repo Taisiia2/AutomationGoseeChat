@@ -16,6 +16,8 @@ public class Xpath {
     public static final String FieldSearch = "//*[@placeholder='Search employee']";
     public static final String NewEmployeeName = "/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr/td[1]/div";
     public static final String NewEmployeeEmail = "/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr/td[1]/div/span";
+    public static final String  ErromMsgWithEmail = "/html/body/div/div/div[1]/div[1]/div/form/div[2]/div/div";
+    public static final String  ErrorMsgWithPassword = "/html/body/div[2]/div/div[2]";
 
 
 
