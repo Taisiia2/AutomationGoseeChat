@@ -5,7 +5,6 @@ import org.testng.annotations.Test;
 
 import static xpath.and.methods.StaticVariable.RegistrarionMth;
 import static xpath.and.methods.Xpath.*;
-import static xpath.and.methods.Xpath.NewEmployeeName;
 
 public class TestFieldSearchNegative extends Methods {
     @Test(description = "Test field search positive data")
@@ -17,7 +16,11 @@ public class TestFieldSearchNegative extends Methods {
         ClickButton(Employees);
         SendKeysWithoutEnter(FieldSearch,"negative test");
         String newUser = getTXT(NegativeBackDataFromFieldSearch);
-        AssertTXT("10", newUser);
+        AssertTXT("                                    10\n" +
+                "                                    25\n" +
+                "                                    50\n" +
+                "                                    100\n" +
+                "                                ", newUser);
 
 //        waitUntil(String.valueOf(10000));
 
