@@ -24,9 +24,14 @@ public class Xpath {
 
     //xpath from Taya
 
-
-
-
+public static final String AdminNotificationButton = "/html/body/div[1]/div/div[2]/div[1]/div[2]/div/div/div[4]/span/span[2]";
+public static final String NotificationsButton = "/html/body/div[1]/div/div[2]/div[1]/div[2]/div/div/div[4]/div/div/a/span[2]";
+public static final String OpenNotificationForm = "/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div[2]";
+public static final String FieldNameNotification = "//*[@id=\"kt_modal_employee\"]/div/div/div[2]/div[1]/input";
+public static final String FieldSlugNotification = "/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]/div/div[2]/div/div/div[2]/div[2]/input";
+public static final String SaveNotificationButton = "/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]/div/div[2]/div/div/div[3]/button[2]";
+public static final String SearchFieldNotification = "//*[@placeholder='Search employee']";
+public static final String NewNotificationName = "/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[2]";
     //xpath from Alex
 public static final String ButtonActions = "/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr/td[5]/a";
 public static final String ButtonDismiss = "/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr/td[5]/div/div[3]/a";
