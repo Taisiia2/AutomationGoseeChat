@@ -28,6 +28,8 @@ public class Xpath {
 
 
     //xpath from Alex
+public static final String ButtonActions = "/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr/td[5]/a";
+public static final String ButtonDismiss = "/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr/td[5]/div/div[3]/a";
 
 
 }
