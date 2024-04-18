@@ -18,6 +18,7 @@ public class Xpath {
     public static final String NewEmployeeEmail = "/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/table/tbody/tr/td[1]/div/span";
     public static final String  ErromMsgWithEmail = "/html/body/div/div/div[1]/div[1]/div/form/div[2]/div/div";
     public static final String  ErrorMsgWithPassword = "/html/body/div[2]/div/div[2]";
+    public static final String NegativeBackDataFromFieldSearch = "/html/body/div[1]/div/div[2]/div[2]/div[1]/div[2]/div/div[1]/div[2]/div/div/div[2]/div[1]/div/label/select/option[1]";
 
 
 

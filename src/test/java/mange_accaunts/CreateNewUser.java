@@ -1,4 +1,4 @@
-package registration;
+package mange_accaunts;
 
 import Methdos.Methods;
 import org.testng.annotations.Test;
