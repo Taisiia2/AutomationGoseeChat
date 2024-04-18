@@ -11,6 +11,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
@@ -80,6 +84,13 @@ public class Methods {
 //        String res =  getTXT(tl);
         Assert.assertEquals(tl,task);
     }
+    public static boolean AssertTXTBool(String tl, String task){
+//        String res =  getTXT(tl);
+//        Assert.assertEquals(tl,task);
+        boolean result = tl.equals(task);
+        return result;
+    }
+
 
     public static void ScrollToEndPage() throws AWTException {
 //        ((JavascriptExecutor) driver).executeScript("100000");
@@ -200,7 +211,14 @@ public class Methods {
         return randomNum;
     }
 
-
+//    public static void LogIntoFile(String MsgToFile) throws IOException {
+//        File f1 = new File("log.txt");
+//        FileWriter fw = new FileWriter(f1, true);  // Залишити коментар
+//        PrintWriter pw = new PrintWriter(fw);
+//        pw.println(MsgToFile);
+//        pw.flush();
+//        pw.close();
+//    }
 
 
     @AfterClass(alwaysRun = true)

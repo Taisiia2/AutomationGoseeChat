@@ -25,6 +25,5 @@ ClickButton(SaveNotificationButton);
 //        WaitLoadPage(2000);
         String newNotififcation = getTXT(NewNotificationName);
         AssertTXT(name, newNotififcation);
-        LogIntoFile("Test case 888 pass");
     }
 }
