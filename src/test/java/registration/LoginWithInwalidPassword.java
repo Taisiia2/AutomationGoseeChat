@@ -10,9 +10,9 @@ import static xpath.and.methods.LogFile.LogIntoFile;
 import static xpath.and.methods.Xpath.*;
 
 public class LoginWithInwalidPassword extends Methods {
-    private static String Msg = "These credentials do not match our records.";
+    private static String Msg = "These credentials do not match our records1.";
     private static String Pass = "Test case 777 Pass";
-    private static String Fail = "Test case 777 Fail";
+    private static String Fail = "Test case 777 Fail ";
     private static boolean RESULT;
 
     @Test(description = "Login Admin")
