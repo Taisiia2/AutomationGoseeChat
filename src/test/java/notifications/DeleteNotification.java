@@ -5,21 +5,18 @@ import org.testng.annotations.Test;
 
 import java.io.IOException;
 
-import static xpath.and.methods.LogFile.LogIntoFile;
 import static xpath.and.methods.StaticVariable.RegistrarionMth;
 import static xpath.and.methods.Xpath.*;
-import static xpath.and.methods.Xpath.NewNotificationName;
 
-public class DeleteNotififcation extends Methods {
-    @Test(description = "Create new notification")
+public class DeleteNotification extends Methods {
+    @Test(description = "Delete notification")
     public void Test1() throws InterruptedException, IOException {
         RegistrarionMth();
         ClickButton(AdminNotificationButton);
         ClickButton(NotificationsButton);
-        SendKeysWithoutEnter(SearchFieldNotification,"hpqmmkjdor");
+        SendKeysWithoutEnter(SearchFieldNotification,"fhzmdtfyew");
         WaitLoadPage(7000);
         ClickButton(ActionNotificationButton);
         ClickButton(DeleteNotificationButton);
-        LogIntoFile("Test case 888 pass");
     }
 }
