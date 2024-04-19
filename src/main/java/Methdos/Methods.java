@@ -2,8 +2,11 @@ package Methdos;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverLogLevel;
+import org.openqa.selenium.chrome.ChromeDriverService;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.service.DriverService;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -11,12 +14,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
 
 
 public class Methods {
@@ -26,16 +27,36 @@ public class Methods {
     private static int seconds = 3000;
 
     @BeforeClass//этот метод отработает самым первым
-    public static void Connect() {
+    public void Connect() {
         try {
+            System.setProperty("webdriver.chrome.silentOutput", "true");
+            java.util.logging.Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
 
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--remote-allow-origins=*");
+            //
+//            options.addArguments("--no-sandbox");
+//            options.addArguments("--headless");
+//            options.addArguments("--disable-gpu");
+//            options.addArguments("--disable-crash-reporter");
+//            options.addArguments("--disable-extensions");
+//            options.addArguments("--disable-in-process-stack-traces");
+//            options.addArguments("--disable-logging");
+//            options.addArguments("--disable-dev-shm-usage");
+//            options.addArguments("--log-level=3");
+//            options.addArguments("--silent");
+//            options.addArguments("--output=/dev/null");
+            options.addArguments("--remote-log");
+            //
             driver = new ChromeDriver(options);
             driver.manage().window().maximize();//развертка экрана на фул сайз
             driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);//прекратить загрузку страницы через 20 секунд, 20 можно менять на любое число
 //            driver.get("https://rozetka.com.ua/ua/");//гипер ссылка нашего сервиса
             driver.get("https://adm.dev.goseechat.com/login");//гипер ссылка нашего сервиса
+
+
+
+
 
         } catch (Exception e) {
             System.out.println(e);//покажет ошибку почему не выполнился метод
@@ -112,7 +133,7 @@ public class Methods {
     public static String getTXT(String xp){
         WebElement element = driver.findElement(By.xpath(xp));
         String res = element.getText();
-        System.out.println(res);
+//        System.out.println(res);
         return res;
     }
 

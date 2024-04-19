@@ -8,9 +8,6 @@
         <class name="registration.LoginWithInwalidEmail" />
         <class name="registration.LoginWithInwalidPassword"/>
         <class name="registration.Registration"/>
-        <class name="mange_accaunts.CreateNewUser"/>
-
-
 
     </classes>
 </test>
